@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { KanbanBoardComponent } from './kanban-board/kanban-board.component';  // Importation
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [KanbanBoardComponent]  // Ajouter KanbanBoardComponent ici
 })
 export class AppComponent {
-  title = 'kanban-app';
+  title = 'TodoList';
 }
